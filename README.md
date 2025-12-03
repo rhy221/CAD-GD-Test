@@ -12,6 +12,9 @@ We train and evaluate our methods on REC8K and FSC-147 dataset. Please follow th
 
 * [REC-8k](https://github.com/sydai/referring-expression-counting)
 * [FSC147](https://github.com/cvlab-stonybrook/LearningToCountEverything)
+* [FSC147-D](https://github.com/niki-amini-naieni/countx)
+
+*About the density map*: Fot the FSC-147, we use the density map of FSC-147 directly. For the Rec8k, we generate the density map using fixed kernel size, you can download the generated density maps from the [link](https://pan.baidu.com/s/10PjtyFNUpBuDdBun1SEINw?pwd=8wa3).
 
 ## Inference
 You can run following command to conduct the inference on the REC-8k and FSC-147 dataset.
