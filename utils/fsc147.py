@@ -90,9 +90,9 @@ class FSC147Dataset(Dataset):
         self.min_size = min_size
         self.max_size = max_size 
         # load annotations for the entire dataset
-        annotation_file = os.path.join('/mnt/workspace_new/guijiang/code/CAD-GD-LOCAL-main/datasets/fsc147', 'annotation_FSC147_384.json')
-        image_classes_file = os.path.join('/mnt/workspace_new/guijiang/code/CAD-GD-LOCAL-main/datasets/fsc147', 'ImageClasses_FSC147.txt')
-        image_classes_file_d= '/mnt/workspace_new/guijiang/code/CAD-GD-LOCAL-main/datasets/fsc147/FSC-147-D.json'
+        annotation_file = os.path.join('./datasets/fsc147', 'annotation_FSC147_384.json')
+        image_classes_file = os.path.join('./datasets/fsc147', 'ImageClasses_FSC147.txt')
+        image_classes_file_d= './datasets/fsc147/FSC-147-D.json'
         self.image_classes = get_image_classes(image_classes_file)
         with open(annotation_file) as f:
             self.annotations = json.load(f)
@@ -299,8 +299,8 @@ if __name__ == '__main__':
     main_transform = MainTransform()
     query_transform = get_query_transforms(is_train=True, exemplar_size=(128, 128))
     
-    dataset = FSC147Dataset(data_dir='s3://fsc147',
-                            data_list='/mnt/petrelfs/wangzhicheng/DATASETS/counting/fsc-147/train.txt',
+    dataset = FSC147Dataset(data_dir='/content/drive/MyDrive/datasets/fsc147',
+                            data_list='./datasets/fsc147/train.txt',
                             scaling=1.0,
                             main_transform=main_transform,
                             query_transform=query_transform)

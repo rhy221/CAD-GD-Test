@@ -13,7 +13,7 @@ def get_fsc_loader(split, batch_size, args=None):
         data_list = './datasets/fsc147/test.txt'
     
     if not args:
-        dataset = FSC147Dataset(data_dir='./datasets/fsc147',
+        dataset = FSC147Dataset(data_dir='/content/drive/MyDrive/datasets/fsc147',
                             data_list=data_list,
                             scaling=1.0,
                             box_number=3,
@@ -22,7 +22,7 @@ def get_fsc_loader(split, batch_size, args=None):
                             query_transform=query_transform,
                             split=split)
     else:
-        dataset = FSC147Dataset(data_dir='./datasets/fsc147',
+        dataset = FSC147Dataset(data_dir='/content/drive/MyDrive/datasets/fsc147',
                     data_list=data_list,
                     scaling=1.0,
                     box_number=3,

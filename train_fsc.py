@@ -66,8 +66,8 @@ torch.manual_seed(seed_value)
 torch.cuda.manual_seed(seed_value)
 
 """ data """
-processor = DataProcessor()
-annotations = processor.annotations
+# processor = DataProcessor()
+# annotations = processor.annotations
 
 BATCH_SIZE_FSC = args.batch
 train_loader = get_fsc_loader('train', BATCH_SIZE_FSC, args)
