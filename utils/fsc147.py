@@ -90,9 +90,9 @@ class FSC147Dataset(Dataset):
         self.min_size = min_size
         self.max_size = max_size 
         # load annotations for the entire dataset
-        annotation_file = os.path.join('./datasets/fsc147', 'annotation_FSC147_384.json')
-        image_classes_file = os.path.join('./datasets/fsc147', 'ImageClasses_FSC147.txt')
-        image_classes_file_d= './datasets/fsc147/FSC-147-D.json'
+        annotation_file = '/content/drive/MyDrive/datasets/fsc147/annotation_FSC147_384.json'
+        image_classes_file = '/content/drive/MyDrive/datasets/fsc147/ImageClasses_FSC147.txt'
+        image_classes_file_d= '/content/drive/MyDrive/datasets/fsc147/FSC-147-D.json'
         self.image_classes = get_image_classes(image_classes_file)
         with open(annotation_file) as f:
             self.annotations = json.load(f)

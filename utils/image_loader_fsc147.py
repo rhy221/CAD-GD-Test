@@ -6,11 +6,11 @@ def get_fsc_loader(split, batch_size, args=None):
     main_transform = MainTransform()
     query_transform = get_query_transforms(True, (128,128))
     if split=='train': 
-        data_list ='./datasets/fsc147/train.txt'
+        data_list ='/content/drive/MyDrive/datasets/fsc147/train.txt'
     elif split=='val':
-        data_list = './datasets/fsc147/val.txt'
+        data_list = '/content/drive/MyDrive/datasets/fsc147/val.txt'
     elif split=='test':    
-        data_list = './datasets/fsc147/test.txt'
+        data_list = '/content/drive/MyDrive/datasets/fsc147/test.txt'
     
     if not args:
         dataset = FSC147Dataset(data_dir='/content/drive/MyDrive/datasets/fsc147',
